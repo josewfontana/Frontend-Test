@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+.img-small{
+  width: 50px;
+}
+
+.img-medium{
+  width: 100px;
+}
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+.carousel-inner {
+  max-height: 200px;
+  img {
+    max-height: 200px;
+  }
+}
