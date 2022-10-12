@@ -7,6 +7,11 @@
       <div class="row mt-3">
         <app-search></app-search>
       </div>
+      <div class="row">
+        <div class="col-4 mt-4" *ngFor="let item of quantity">
+          <app-product-card [product]="item"></app-product-card>
+        </div>
+      </div>
     </div>
     <div class="col-4">
       <app-cart-widget></app-cart-widget>
