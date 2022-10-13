@@ -15,6 +15,8 @@ import { SearchComponent } from './components/search/search.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductViewComponent } from './views/product-view/product-view.component';
+import { ProductsListComponent } from './views/products-list/products-list.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -28,13 +30,15 @@ import { ProductViewComponent } from './views/product-view/product-view.componen
     BannerComponent,
     SearchComponent,
     ProductViewComponent,
+    ProductsListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

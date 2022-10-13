@@ -13,4 +13,8 @@ export class ProductsService {
   recommendedProducts(){
     return this.http.get('http://localhost:8080/recommendeds')
   }
+
+  getProductList(page: number, limit: number){
+    return this.http.get(`http://localhost:8080/products?_page=${page}&_limit=${limit}`)
+  }
 }

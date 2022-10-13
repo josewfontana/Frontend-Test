@@ -1,0 +1,36 @@
+<div 
+  class="container"
+  infinite-scroll
+  [infiniteScrollDistance]="0"
+  [infiniteScrollThrottle]="1000"
+  (scrolled)="onScroll()"
+>
+  <div class="row">
+    <div class="col-8">
+      <div class="row">
+        <app-search></app-search>
+      </div>
+      <div class="row">
+        <div class="col-12 d-flex justify-content-between">
+          <h2>Products list</h2>
+          <label class="align-self-center d-flex align-items-center">
+            Limit:
+            <select class="form form-control" (change)="testSelect($event)">
+              <option value="10">10</option>
+              <option value="25">25</option>
+              <option value="50">50</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4 mt-4" *ngFor="let product of products">
+          <app-product-card [product]="product"></app-product-card>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <app-cart-widget></app-cart-widget>
+    </div>
+  </div>
+</div>
