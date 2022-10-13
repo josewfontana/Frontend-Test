@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {faCartShopping as faCart} from '@fortawesome/free-solid-svg-icons';
+import { CartService } from 'src/app/controllers/cart.service';
 
 @Component({
   selector: 'app-product-card',
@@ -12,9 +13,13 @@ export class ProductCardComponent implements OnInit {
 
   faCart = faCart;
 
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
   }
 
+
+  addToCard(id: number){
+    this.cartService.addToCart(id)
+  }
 }

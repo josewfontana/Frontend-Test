@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/app/controllers/products.service';
+import { ProductInterface } from 'src/app/interfaces/ProductInteface';
 
 @Component({
   selector: 'app-products-list',
@@ -10,7 +11,7 @@ export class ProductsListComponent implements OnInit {
 
   page: number = 1;
   limit: number = 10;
-  products: Array<Object> = [];
+  products: Array<ProductInterface> = [];
 
   constructor(private productService: ProductsService) { }
 

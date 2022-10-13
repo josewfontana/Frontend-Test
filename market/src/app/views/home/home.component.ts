@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductInterface } from 'src/app/interfaces/ProductInteface';
 import { ProductsService } from '../../controllers/products.service';
 @Component({
   selector: 'app-home',
@@ -7,7 +8,7 @@ import { ProductsService } from '../../controllers/products.service';
 })
 export class HomeComponent implements OnInit {
 
-  quantity: Array<Object> = [];
+  products: Array<ProductInterface> = [];
 
   constructor(private productService: ProductsService) { }
 
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit {
     this.productService.recommendedProducts()
       .subscribe(
         (products: any) => {
-          this.quantity = [...products]
+          this.products = [...products]
         }
       )
   }

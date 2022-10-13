@@ -17,6 +17,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductViewComponent } from './views/product-view/product-view.component';
 import { ProductsListComponent } from './views/products-list/products-list.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     NgbModule,
     FontAwesomeModule,
     HttpClientModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    StoreModule.forRoot({}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]
